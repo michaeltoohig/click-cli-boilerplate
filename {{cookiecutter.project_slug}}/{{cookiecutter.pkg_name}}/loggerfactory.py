@@ -1,5 +1,7 @@
 import logging
 
+from {{ cookiecutter.pkg_name }}.config import LOG_LEVEL
+
 
 class LoggerFactory:
     _LOG = None
@@ -24,10 +26,12 @@ class LoggerFactory:
         return LoggerFactory._LOG
 
     @staticmethod
-    def get_logger(log_file, log_level):
+    def get_logger(log_file, log_level=None):
         """
         A static method called by other modules to initialize logger in their own module
         """
+        if log_level is None:
+            log_level = LOG_LEVEL
         logger = LoggerFactory.__create_logger(log_file, log_level)
 
         # return the logger object

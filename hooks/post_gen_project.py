@@ -25,12 +25,12 @@ if __name__ == "__main__":
     if "Not open source" == "{{ cookiecutter.open_source_license }}":
         remove_file("LICENSE")
 
-    if "no" in "{{ cookiecutter.use_alembic | lower }}":
+    if "n" in "{{ cookiecutter.use_alembic | lower }}":
         alembic_file = os.path.join("alembic.ini")
         remove_file(alembic_file)
         alembic_directory = os.path.join("alembic")
         remove_directory(alembic_directory)
 
-    if "no" in "{{ cookiecutter.use_sqlalchemy | lower }}":
+    if "n" in "{{ cookiecutter.use_sqlalchemy | lower }}":
         database_directory = os.path.join("{{ cookiecutter.pkg_name }}", "database")
         remove_directory(database_directory)

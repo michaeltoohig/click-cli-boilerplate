@@ -1,6 +1,5 @@
 import click
 
-from {{ cookiecutter.pkg_name }}.config import LOG_LEVEL
 from {{ cookiecutter.pkg_name }}.loggerfactory import LoggerFactory
 {%- if "y" in cookiecutter.use_sqlalchemy | lower %}
 from {{ cookiecutter.pkg_name }}.database.models import Widget
@@ -13,7 +12,7 @@ from {{ cookiecutter.pkg_name }}.cli.utils import print_table
 from {{ cookiecutter.pkg_name }}.cli.utils import print_chart
 {%- endif %}
 
-logger = LoggerFactory.get_logger("widgets", log_level=LOG_LEVEL)
+logger = LoggerFactory.get_logger("widgets")
 
 
 @click.group()
