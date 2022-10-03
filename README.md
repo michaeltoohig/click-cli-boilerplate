@@ -1,17 +1,21 @@
 # Click CLI Boilerplate
 
-Cookiecutter template for a Click CLI project.
+Cookiecutter template for a Click CLI project with optional SQLAlchemy/Alembic support and more.
 
 ## Features
 
 This tool will create Python Click CLI project with the following features:
 
 * [Poetry](https://python-poetry.org/): Manage dependency, build and release
+* [Click](https://click.palletsprojects.com/en/8.0.x/): Command line interface framework 
+* [SQLAlchemy](https://www.sqlalchemy.org/): (optional) Connect to database for you CLI including session handling decorator
+* [Alembic](https://alembic.sqlalchemy.org/en/latest/): (optional) For updating your database schemas alongside your code
+* [tabulate](https://github.com/astanin/python-tabulate): (optional) Pretty-print tabular data easily with included decorator
+* [termgraph](https://github.com/mkaz/termgraph): (optional) Draw basic graphs in your CLI easily with included decorator
 * Testing with [Pytest](https://pytest.org) (unittest is still supported out of the box)
 * Code coverage report and endorsed by [Codecov](https://codecov.io)
 * Format with [Black](https://github.com/psf/black) and [Isort](https://github.com/PyCQA/isort)
 * Lint code with [Flake8](https://flake8.pycqa.org) and [Flake8-docstrings](https://pypi.org/project/flake8-docstrings/)
-* Command line interface using [Click](https://click.palletsprojects.com/en/8.0.x/) (optional)
 * [bump2version](https://github.com/c4urself/bump2version): Pre-configured version bumping with a single command
 
 ## Quickstart
