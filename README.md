@@ -8,7 +8,7 @@ This tool will create Python Click CLI project with the following features:
 
 * [Poetry](https://python-poetry.org/): Manage dependency, build and release
 * [Click](https://click.palletsprojects.com/en/8.0.x/): Command line interface framework 
-* [structlog](https://www.structlog.org): Structured logging for production-ready logging for your CLI
+* [structlog](https://www.structlog.org): Production-ready structured logging for your CLI
 * [SQLAlchemy](https://www.sqlalchemy.org/): (optional) Connect to database for you CLI including session handling decorator
 * [Alembic](https://alembic.sqlalchemy.org/en/latest/): (optional) For updating your database schemas alongside your code
 * [tabulate](https://github.com/astanin/python-tabulate): (optional) Pretty-print tabular data easily with included decorator
