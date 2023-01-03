@@ -35,8 +35,10 @@ For help, run:
 
 For crontab usage example:
 
-    */5 * * * cd /path/to/{{ cookiecutter.project_slug }} && . /path/to/pypoetry/virtualenv/bin/activate && {{ cookiecutter.project_slug }} [COMMAND] >> logs/`date +\%Y-\%m-\%d`.log 2>&1
+    */5 * * * cd /path/to/{{ cookiecutter.project_slug }} && . /path/to/pypoetry/virtualenv/bin/activate && {{ cookiecutter.project_slug }} --strict [COMMAND] >> logs/`date +\%Y-\%m-\%d`.log 2>&1
     0 0 * * * /usr/bin/find /path/to/{{ cookiecutter.project_slug }}/logs -name "*.log" -type f -mtime +7 -exec rm -f {} \;
+
+Note the use of the `--strict` option for production use so logs are rendered to JSON and without color.
 
 ## Development
 
